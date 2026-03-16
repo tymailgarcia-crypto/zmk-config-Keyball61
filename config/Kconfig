@@ -1,3 +1,0 @@
-menuconfig ZMK_VOLBALL
-    bool "ZMK trackball volume processor"
-    default y
