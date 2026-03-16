@@ -1,0 +1,17 @@
+description: Trackball movement to volume input processor
+
+compatible: "zmk,input-processor-volball"
+
+include: base.yaml
+
+properties:
+  layer:
+    type: int
+    required: true
+
+  threshold:
+    type: int
+    default: 8
+
+  invert:
+    type: boolean
