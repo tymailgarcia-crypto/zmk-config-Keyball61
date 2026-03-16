@@ -1,0 +1,4 @@
+name: zmk-volball
+build:
+  cmake: .
+  kconfig: Kconfig
