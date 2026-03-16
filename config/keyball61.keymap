@@ -1,12 +1,17 @@
 #define DEFAULT 0
 #define SYM     1
 #define FUN     2
-#define MOUSE   3 // Auto-Mouse Layer
-#define SCROLL  4 // Motion Scroll Layer
-#define SNIPE   5 // Snipe Mode Layer
+#define MOUSE   3
+#define SCROLL  4
+#define SNIPE   5
 
-#include <behaviors/mouse_keys.dtsi>
-#include <behaviors.dtsi>
+#undef ZMK_BEHAVIORS_KEEP_ALL
+#define ZMK_BEHAVIORS_KEEP_MKP   /* Mouse clicks */
+#define ZMK_BEHAVIORS_KEEP_MMV   /* Mouse move */
+#define ZMK_BEHAVIORS_KEEP_MSC   /* Mouse scroll */
+
+#include <behaviors.dtsi>      /* Core behaviors FIRST */
+#include <behaviors/mouse_keys.dtsi>  /* Mouse AFTER */
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
